@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
 
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
-def hero(request):
-    return HttpResponse('this is a success')
+class HeroView(APIView):
+    def get(self, request):
+        return Response({'msg': 'this is a success'}, status=status.HTTP_200_OK)
