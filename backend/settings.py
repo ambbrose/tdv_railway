@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 import dj_database_url
+from dj_database_url import parse as db_url
 from pathlib import Path
 from decouple import config
 
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-brn9(0m&s2+%hvk+rdpkf--x-qxk%cgi#lh^=m!ocvviq15#9x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,13 +81,21 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': config(
+        'DATABASE_URL',
+        default='postgresql://postgres:jE0ovYtawsI2wsiVMKdL@containers-us-west-66.railway.app:6257/railway',
+        cast=db_url
+    )
 }
 
-DATABASES['default'] = dj_database_url.config()
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES['default'] = dj_database_url.config()
 # conn_max_age=600, ssl_require=True
 # DATABASES = {
 #     'default': {
@@ -137,7 +146,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
 # Default primary key field type
