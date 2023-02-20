@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+
 import os
-import dj_database_url
 from dj_database_url import parse as db_url
 from pathlib import Path
 from decouple import config
@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-brn9(0m&s2+%hvk+rdpkf--x-qxk%cgi#lh^=m!ocvviq15#9x'
+SECRET_KEY = 'django-insecure-wjy(ao5i=fcz&rd3t#10fsjxi_^td*w#40-sr_6ab59bwgnv_h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,10 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'hero',
-
-    'rest_framework'
+    'rest_framework',
+    'hero'
 ]
 
 MIDDLEWARE = [
@@ -80,14 +78,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': config(
-        'DATABASE_URL',
-        default='postgresql://postgres:jE0ovYtawsI2wsiVMKdL@containers-us-west-66.railway.app:6257/railway',
-        cast=db_url
-    )
-}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -95,18 +85,13 @@ DATABASES = {
 #     }
 # }
 
-# DATABASES['default'] = dj_database_url.config()
-# conn_max_age=600, ssl_require=True
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'practical_django_ecomstore',
-#         'USER': 'root',
-#         'PASSWORD': 'Nugaforsure9',
-#         'HOST': '',
-#         'PORT': '3306'
-#     }
-# }
+DATABASES = {
+    'default': config(
+        'DATABASE_URL',
+        default='mysql://root:1gTNf6a5c9iI3tptN3dz@containers-us-west-187.railway.app:6726/railway',
+        cast=db_url
+    )
+}
 
 
 # Password validation
@@ -143,11 +128,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
+STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

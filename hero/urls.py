@@ -5,5 +5,5 @@ from .views import HeroView
 app_name = 'hero'
 
 urlpatterns = [
-    path('hero', HeroView.as_view(), name='hero_view')
+    path('hero/', HeroView.as_view(), name='hero_view')
 ]
