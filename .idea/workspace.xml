@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="953199fb-327e-41f2-a312-3cccaec4ae96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hero/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/hero/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hero/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hero/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hero/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hero/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hero/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hero/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hero/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracks/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
