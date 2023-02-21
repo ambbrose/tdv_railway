@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # }
 
 DATABASES = {
-#     'default': config(
-#         'DATABASE_URL',
-#         default='mysql://root:1gTNf6a5c9iI3tptN3dz@containers-us-west-187.railway.app:6726/railway',
-#         cast=db_url
-#     )
+    'default': config(
+        'DATABASE_URL',
+        default='mysql://root:1gTNf6a5c9iI3tptN3dz@containers-us-west-187.railway.app:6726/railway',
+        cast=db_url
+    )
 }
 
 
@@ -131,6 +131,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
