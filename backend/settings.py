@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # }
 
 DATABASES = {
-    'default': config(
-        'DATABASE_URL',
-        default='mysql://root:1gTNf6a5c9iI3tptN3dz@containers-us-west-187.railway.app:6726/railway',
-        cast=db_url
-    )
+#     'default': config(
+#         'DATABASE_URL',
+#         default='mysql://root:1gTNf6a5c9iI3tptN3dz@containers-us-west-187.railway.app:6726/railway',
+#         cast=db_url
+#     )
 }
 
 
